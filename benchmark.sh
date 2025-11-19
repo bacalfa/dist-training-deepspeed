@@ -6,4 +6,4 @@ NUM_GPUS=${1:-1}
 DEEPSPEED_CONFIG=deepspeed_config.json
 
 # Use deepspeed launcher
-deepspeed --num_gpus $NUM_GPUS train.py --model gpt2 --batch-size 4 --steps 100 --deepspeed_config $DEEPSPEED_CONFIG
+deepspeed --num_gpus $NUM_GPUS train.py --model_name gpt2 --batch_size 32 --epochs 10 --deepspeed_config $DEEPSPEED_CONFIG
