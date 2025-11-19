@@ -87,7 +87,7 @@ def main():
     )
 
     # Compute tokens per step
-    tokens_per_step = args.batch_size * args.seq_len
+    tokens_per_step = args.batch_size * args.seq_length
 
     # Initialize LLM and DeepSpeed engine
     model, tokenizer = load_model(args.model_name)
