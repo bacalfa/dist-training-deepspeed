@@ -96,8 +96,8 @@ def main():
     parser.add_argument("--out_dir", type=str, default="results")
     parser.add_argument("--warmup", type=int, default=20)
 
-    parser.parse_args()
-    scan_results(parser.out_dir, parser.warmup)
+    args = parser.parse_args()
+    scan_results(args.out_dir, args.warmup)
 
 
 if __name__ == "__main__":
