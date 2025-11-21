@@ -45,7 +45,7 @@ def summarize_run(run_dir: str, warmup_steps: int = 20):
 
         util = df[util_col].str.replace("%", "").str.strip().astype(float)
         util = util[util > 0]
-        mem = df[mem_col].str.replace("%", "").str.strip().astype(float)
+        mem = df[mem_col].str.replace("MiB", "").str.strip().astype(float)
         mem = mem[mem > 0]
         avg_util = util.mean()
         avg_mem = mem.mean() if mem is not None else None
