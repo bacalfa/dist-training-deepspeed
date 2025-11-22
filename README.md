@@ -23,7 +23,7 @@ A total of 8 experiments were run (see DeepSpeed configuration files in [experim
 +-----------------------------------------+------------------------+----------------------+
 ```
 
-The aggregated results by experiment are given below:
+The LLM used was GPT2 provided via Hugging Face. The aggregated results by experiment are given below:
 
 ```
                           median_tokens_per_sec             avg_step_time_s           peak_gpu_mem_mb avg_gpu_util_pct
