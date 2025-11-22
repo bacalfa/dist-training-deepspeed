@@ -23,7 +23,7 @@ A total of 8 experiments were run (see DeepSpeed configuration files in [experim
 +-----------------------------------------+------------------------+----------------------+
 ```
 
-The aggregated results by experiment is given below:
+The aggregated results by experiment are given below:
 
 ```
                           median_tokens_per_sec             avg_step_time_s           peak_gpu_mem_mb avg_gpu_util_pct
@@ -39,7 +39,12 @@ zs3_fp16_gpus1_bs32_sl128             11922.985  282.623740        0.361432  0.0
 zs3_fp32_gpus1_bs32_sl128              6968.430    2.496669        0.616783  0.000467         12570.0        71.084372
 ```
 
-The main observation is that `fp16` leads to higher throughput measured by median tokens per second compared to `fp32`. In addition, the average step time is also lower for `fp16`. Lastly, enabling ZeRO stage 3 led to the most significant decrease in GPU utilization. Additional analysis could include plotting latency as a function of different values for batch size and sequence length.
+Key observations are as follows:
+- `fp16` leads to higher throughput measured by median tokens per second compared to `fp32`
+- Average step time is also lower for `fp16`
+- Enabling ZeRO stage 3 led to the most significant decrease in GPU utilization
+
+Additional analysis could include plotting latency as a function of different values for batch size and sequence length.
 
 ## Running Locally
 
